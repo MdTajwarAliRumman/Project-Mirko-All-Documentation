@@ -44,7 +44,7 @@ This project is designed to provide comprehensive accounting and tax consultancy
 
 <p align="left">
   <a href="#" target="_blank">
-    <img src="https://img.shields.io/badge/Tax%20Report-Coming%20Soon-red?style=for-the-badge" alt="Tax Report" />
+    <img src="https://img.shields.io/badge/Bug%20Report-Coming%20Soon-red?style=for-the-badge" alt="Bug Report" />
   </a>
 </p>
 

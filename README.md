@@ -39,8 +39,8 @@ This project is designed to provide comprehensive accounting and tax consultancy
 
 ---
 
-## 📊 Live Report / Tax Calculation Log (Optional)
-*(If you have a Google Sheet or Bug Log — replace link as needed)*
+## 📊 Live Report 
+*(Report is on development)*
 
 <p align="left">
   <a href="#" target="_blank">
@@ -53,10 +53,20 @@ This project is designed to provide comprehensive accounting and tax consultancy
 ## 🖼️ Screenshots / UI Preview
 <details>
   <summary>Click to view Screenshots</summary>
-  
-<img width="1781" alt="Dashboard" src="https://via.placeholder.com/1800x900?text=Dashboard+Screenshot" />
-<img width="1853" alt="Input Form" src="https://via.placeholder.com/1800x900?text=Input+Form+Screenshot" />
-<img width="1872" alt="Tax Breakdown" src="https://via.placeholder.com/1800x900?text=Tax+Breakdown+Screenshot" />
+  <p align="left">
+  <a href="https://www.figma.com/design/845XWGfdhWfxmYPvcHURf9/My-Tax-Breaker-_-mirko86z-_-WixBuddy?node-id=22157-373&p=f&t=Cp65dv3IEnQPgOqL-0" target="_blank">
+    <img src="https://img.shields.io/badge/Figma%20Desgin-Click%20Here-yellow?style=for-the-badge" alt="Figma Design" />
+  </a>
+</p>
+<img width="1245" height="700" alt="Image" src="https://github.com/user-attachments/assets/64c6ea74-5483-4b02-b52d-64228f980842" /> 
+<img width="1098" height="856" alt="Image" src="https://github.com/user-attachments/assets/6a3da6a0-9d27-4228-8542-d84dab2167b1" />
+<img width="1056" height="784" alt="Image" src="https://github.com/user-attachments/assets/811d3c1d-1f89-4231-a34c-a0332780fec4" />
+<img width="1120" height="851" alt="Image" src="https://github.com/user-attachments/assets/3ce41d45-75d6-46aa-b94b-3c926798aa8b" />
+<img width="1182" height="867" alt="Image" src="https://github.com/user-attachments/assets/a8257010-ca9f-4a1c-8a19-6e5f5f30ac4c" />
+<img width="1300" height="739" alt="Image" src="https://github.com/user-attachments/assets/7027d85a-4842-496a-a24e-1ec980117a8e" />
+<img width="1251" height="833" alt="Image" src="https://github.com/user-attachments/assets/1664618c-868d-4bb0-8f07-800ca8d30c83" />
+<img width="1257" height="755" alt="Image" src="https://github.com/user-attachments/assets/28cda88f-9dba-448a-bf99-29df29f9a74e" />
+<img width="1081" height="763" alt="Image" src="https://github.com/user-attachments/assets/55365a97-58fe-4ab1-be94-5b17a7a8bd16" />
   
 </details>
 

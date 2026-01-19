@@ -39,14 +39,20 @@ This project is designed to provide comprehensive accounting and tax consultancy
 
 ---
 
-## 📊 Live Report 
-*(Report is on development)*
+## 📊 Live Reports 
+*(Continuously Updating the reports)*
 
 <p align="left">
-  <a href="#" target="_blank">
-    <img src="https://img.shields.io/badge/Bug%20Report-Coming%20Soon-red?style=for-the-badge" alt="Bug Report" />
+  <a href="https://www.notion.so/2eb16aeb73b880dfb5b7ec5b6a269a0d?v=2eb16aeb73b8812db010000cb797575c&source=copy_link" target="_blank">
+    <img src="https://img.shields.io/badge/Bug_Report:%20Mobile_App-Click%20Here!-red?style=for-the-badge" alt="Bug Report" />
   </a>
 </p>
+<p align="left">
+  <a href="https://www.notion.so/2d916aeb73b880bd8e10e559c887cd09?v=2d916aeb73b881c7be6f000c018ec6fc" target="_blank">
+    <img src="https://img.shields.io/badge/TestCase:%20API_Testing-Click%20Here!-yellow?style=for-the-badge" alt="Bug Report" />
+  </a>
+</p>
+
 
 ---
 
@@ -55,7 +61,7 @@ This project is designed to provide comprehensive accounting and tax consultancy
   <summary>Click to view Screenshots</summary>
   <p align="left">
   <a href="https://www.figma.com/design/845XWGfdhWfxmYPvcHURf9/My-Tax-Breaker-_-mirko86z-_-WixBuddy?node-id=22157-373&p=f&t=Cp65dv3IEnQPgOqL-0" target="_blank">
-    <img src="https://img.shields.io/badge/Figma%20Desgin-Click%20Here-yellow?style=for-the-badge" alt="Figma Design" />
+    <img src="https://img.shields.io/badge/Figma%20Desgin-Click%20Here-Green?style=for-the-badge" alt="Figma Design" />
   </a>
 </p>
 <img width="1245" height="700" alt="Image" src="https://github.com/user-attachments/assets/64c6ea74-5483-4b02-b52d-64228f980842" /> 

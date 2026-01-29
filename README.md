@@ -53,6 +53,16 @@ This project is designed to provide comprehensive accounting and tax consultancy
   </a>
 </p>
 
+<details>
+  <summary>Click to view Newman Report</summary>
+<img src="https://img.shields.io/badge/Type-Newman%20Report-orange?style=flat-square" />
+  
+<img width="905" height="918" alt="Image" src="https://github.com/user-attachments/assets/f595df0a-8590-4936-a941-0e7de837373e" />
+<img width="907" height="863" alt="Image" src="https://github.com/user-attachments/assets/1010c0bb-ef23-42b0-bb5d-4ba0ada064f3" />
+<img width="910" height="702" alt="Image" src="https://github.com/user-attachments/assets/a9ea85d6-c7e7-4ffe-bee9-9b60002595f4" />
+<img width="909" height="262" alt="Image" src="https://github.com/user-attachments/assets/bfb03ce6-1aa7-496d-b40f-0596aac643e9" />
+  
+</details>
 
 ---
 

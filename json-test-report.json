@@ -29,7 +29,7 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 60000
+        "timeout": 100000
       }
     ],
     "quiet": false,
@@ -64,46 +64,56 @@
   },
   "suites": [
     {
-      "title": "01_Authentication_Module\\01_Authentication_test.spec.ts",
-      "file": "01_Authentication_Module/01_Authentication_test.spec.ts",
+      "title": "01_Authentication_Module\\02_Signup_test.spec.ts",
+      "file": "01_Authentication_Module/02_Signup_test.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Signup Flow",
-          "file": "01_Authentication_Module/01_Authentication_test.spec.ts",
+          "title": "Authentication Flow",
+          "file": "01_Authentication_Module/02_Signup_test.spec.ts",
           "line": 6,
           "column": 6,
           "specs": [
             {
-              "title": "Verify \"Login section\" is visible",
+              "title": "Verify \"Users are able to sign up Successfully and login",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 60000,
+                  "timeout": 100000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 9,
+                      "workerIndex": 12,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2695,
+                      "duration": 26783,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-02-17T05:52:38.435Z",
+                      "steps": [
+                        {
+                          "title": "Verify \"Users are able to sign up and move to the OTP page Successfully",
+                          "duration": 10773
+                        },
+                        {
+                          "title": "Verify logging in using the registered email and password",
+                          "duration": 12179
+                        }
+                      ],
+                      "startTime": "2026-02-17T09:54:11.851Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\test-results\\01_Authentication_Module-0-90fb0-fy-Login-section-is-visible-chromium\\trace.zip"
+                          "path": "C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\test-results\\01_Authentication_Module-0-3efc5-n-up-Successfully-and-login-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -111,9 +121,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "900ecb3367fde8eddb06-1d9340d2b646c33f1ebd",
-              "file": "01_Authentication_Module/01_Authentication_test.spec.ts",
-              "line": 25,
+              "id": "82f75f1ed935a2780a22-2e1d1730c1fb777b2781",
+              "file": "01_Authentication_Module/02_Signup_test.spec.ts",
+              "line": 31,
               "column": 9
             }
           ]
@@ -123,8 +133,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-17T05:52:36.546Z",
-    "duration": 5052.989999999991,
+    "startTime": "2026-02-17T09:54:09.960Z",
+    "duration": 29319.60499999998,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

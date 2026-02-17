@@ -1,4 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 /**
  * Read environment variables from file.
@@ -26,7 +29,8 @@ export default defineConfig({
   reporter: [['html'],
   ['list'],
   ['json', { outputFile: 'json-test-report.json' }],
-  ['allure-playwright']],
+    // ['allure-playwright']
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */

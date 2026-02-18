@@ -18,6 +18,11 @@ export class AuthPage {
     readonly verifyOtpBtn: Locator;
     readonly logobutton: Locator;
 
+    readonly onboardingOptions: Locator;
+    readonly onboardingNotes: Locator;
+    readonly onboardingContinueBtn: Locator;
+    readonly onboardingFinishBtn: Locator;
+
     constructor(page: Page) {
         this.page = page
 
@@ -35,6 +40,12 @@ export class AuthPage {
         this.signupButton = page.locator("//button[normalize-space()='Sign Up']")
         this.verifyOtpBtn = page.locator("//button[normalize-space()='Verify OTP']")
         this.logobutton = page.locator("//img[@alt='auth logo']")
+
+        this.onboardingOptions = page.locator("//span[normalize-space()='option1']")
+        this.onboardingNotes = page.locator("//textarea[@placeholder='Any extra context, doubts, or comments...']")
+        this.onboardingContinueBtn = page.locator("//button[normalize-space()='Continue']")
+        this.onboardingFinishBtn = page.locator("//button[normalize-space()='Finish & Submit']")
+
     }
 
     // Methods
@@ -49,7 +60,34 @@ export class AuthPage {
         await this.signUpConfirmPasswordInput.fill(confirmPassword);
         await this.termsCheckbox.click();
         await this.signupButton.click();
-
     }
 
+
+
+    async completeOnboarding(text: string, waitForSelector?: string) {
+        for (let step = 1; step <= 10; step++) {
+            // Handle option selection if present
+            const option = this.page.locator("//span[normalize-space()='option1']");
+            if (await option.isVisible().catch(() => false)) await option.click();
+
+            // Handle notes if present
+            if (await this.onboardingNotes.isVisible().catch(() => false)) await this.onboardingNotes.fill(text);
+
+            // Check if last step
+            if (await this.onboardingFinishBtn.isVisible().catch(() => false)) {
+                await this.onboardingFinishBtn.click();
+                if (waitForSelector) await this.page.waitForSelector(`text=${waitForSelector}`);
+                break;
+            }
+
+            await this.onboardingContinueBtn.click();
+            await this.page.waitForTimeout(2000);
+        }
+    }
+
+
+
+    generateEmail() {
+        return `user_${Date.now()}@testmail.com`;
+    }
 }

@@ -10,7 +10,6 @@ test.describe('Authentication Flow', () => {
     test.beforeEach(async ({ page }) => {
         authPage = new AuthPage(page);
         homePage = new HomePage(page);
-        const generateEmail = () => `user_${Date.now()}@testmail.com`;
 
 
         await homePage.goToURL();
@@ -28,7 +27,6 @@ test.describe('Authentication Flow', () => {
         await authPage.loginButton.click();
         await expect(page.getByText('Login Successful')).toBeVisible();
     });
-
 
 
 });

@@ -69,6 +69,13 @@ test.describe('Authentication Flow', () => {
             await expect(page.getByText('Choose the Plan That Fits Your Finances')).toBeVisible();
         });
 
+        await test.step('Verify Subscription page fields are working as expected', async () => {
+
+            await page.getByText('Subscribe Now').first().click();
+            await expect(page.getByText('Secure Checkout')).toBeVisible();
+        });
+
+
     });
 
 });

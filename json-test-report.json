@@ -89,10 +89,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 10,
+                      "workerIndex": 15,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 50680,
+                      "duration": 50070,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -100,26 +100,30 @@
                       "steps": [
                         {
                           "title": "Verify \"Users are able to sign up and move to the OTP page Successfully",
-                          "duration": 12005
+                          "duration": 7932
                         },
                         {
                           "title": "Verify logging in using the registered email and password",
-                          "duration": 5207
+                          "duration": 5197
                         },
                         {
                           "title": "Verify Onboarding screens are working as expected",
-                          "duration": 21516
+                          "duration": 21438
                         },
                         {
                           "title": "Verify Personal Information screen is working as expected",
-                          "duration": 2177
+                          "duration": 2238
                         },
                         {
                           "title": "Verify Business Information page fields are working as expected",
-                          "duration": 4696
+                          "duration": 3732
+                        },
+                        {
+                          "title": "Verify Subscription page fields are working as expected",
+                          "duration": 4821
                         }
                       ],
-                      "startTime": "2026-02-19T06:53:58.696Z",
+                      "startTime": "2026-02-19T08:34:57.382Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -145,8 +149,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-19T06:53:56.812Z",
-    "duration": 53783.753999999724,
+    "startTime": "2026-02-19T08:34:55.480Z",
+    "duration": 53268.887999998406,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

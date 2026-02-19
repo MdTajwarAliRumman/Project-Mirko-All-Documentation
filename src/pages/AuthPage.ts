@@ -40,6 +40,8 @@ export class AuthPage {
     readonly comments: Locator;
     readonly businessContinueBtn: Locator;
 
+    readonly subscripitionBtn: Locator;
+
     constructor(page: Page) {
         this.page = page
 
@@ -79,6 +81,8 @@ export class AuthPage {
         this.businessEmail = page.locator("//input[@placeholder='yourcompany@pec.it']")
         this.comments = page.locator("//textarea[@placeholder='Please provide any additional information about your business, special requirements, or questions you have.']")
         this.businessContinueBtn = page.locator("//button[normalize-space()='Continue to Document Upload']")
+
+        this.subscripitionBtn = page.locator("//button[normalize-space()='Choose the Plan That Fits Your Finances']")
     }
 
     // Methods

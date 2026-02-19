@@ -89,10 +89,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 9,
+                      "workerIndex": 10,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 40528,
+                      "duration": 50680,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -100,22 +100,26 @@
                       "steps": [
                         {
                           "title": "Verify \"Users are able to sign up and move to the OTP page Successfully",
-                          "duration": 7990
+                          "duration": 12005
                         },
                         {
                           "title": "Verify logging in using the registered email and password",
-                          "duration": 5219
+                          "duration": 5207
                         },
                         {
                           "title": "Verify Onboarding screens are working as expected",
-                          "duration": 21533
+                          "duration": 21516
                         },
                         {
                           "title": "Verify Personal Information screen is working as expected",
-                          "duration": 2156
+                          "duration": 2177
+                        },
+                        {
+                          "title": "Verify Business Information page fields are working as expected",
+                          "duration": 4696
                         }
                       ],
-                      "startTime": "2026-02-19T06:03:05.412Z",
+                      "startTime": "2026-02-19T06:53:58.696Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -131,7 +135,7 @@
               ],
               "id": "82f75f1ed935a2780a22-2e1d1730c1fb777b2781",
               "file": "01_Authentication_Module/02_Signup_test.spec.ts",
-              "line": 31,
+              "line": 33,
               "column": 9
             }
           ]
@@ -141,8 +145,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-19T06:03:03.499Z",
-    "duration": 43478.4990000003,
+    "startTime": "2026-02-19T06:53:56.812Z",
+    "duration": 53783.753999999724,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

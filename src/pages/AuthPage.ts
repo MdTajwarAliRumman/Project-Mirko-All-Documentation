@@ -32,6 +32,14 @@ export class AuthPage {
     readonly phoneNumber: Locator;
     readonly continueBtn: Locator;
 
+    readonly businessName: Locator;
+    readonly businessType: Locator;
+    readonly businessAddress: Locator;
+    readonly VatId: Locator;
+    readonly businessEmail: Locator;
+    readonly comments: Locator;
+    readonly businessContinueBtn: Locator;
+
     constructor(page: Page) {
         this.page = page
 
@@ -63,6 +71,14 @@ export class AuthPage {
         this.address = page.locator("//input[@placeholder='Enter your residence address']")
         this.phoneNumber = page.locator("//input[@placeholder='Enter your phone number']")
         this.continueBtn = page.locator("//button[normalize-space()='Continue to Business Information']")
+
+        this.businessName = page.locator("//input[@placeholder='Your company or business name']")
+        this.businessType = page.locator("//select[@name='activity']")
+        this.businessAddress = page.locator("//input[@placeholder='Enter your business address']")
+        this.VatId = page.locator("//input[@placeholder='IT12345678901']")
+        this.businessEmail = page.locator("//input[@placeholder='yourcompany@pec.it']")
+        this.comments = page.locator("//textarea[@placeholder='Please provide any additional information about your business, special requirements, or questions you have.']")
+        this.businessContinueBtn = page.locator("//button[normalize-space()='Continue to Document Upload']")
     }
 
     // Methods
@@ -103,12 +119,6 @@ export class AuthPage {
     async personalInfo(firstName: string, lastName: string, DOB: string, fiscalCode: string, country: string, address: string, phoneNumber: string) {
         await this.firstName.fill(firstName);
         await this.lastName.fill(lastName);
-
-        // Convert DD-MM-YYYY → YYYY-MM-DD
-        // const [day, month, year] = DOB.split('-');
-        // const formattedDOB = `${year}-${month}-${day}`;
-
-        // await this.DOB.fill(formattedDOB);
         await this.DOB.fill('1999-01-01');
         await this.fiscalCode.fill(fiscalCode);
         await this.country.click();
@@ -116,6 +126,21 @@ export class AuthPage {
         await this.address.fill(address);
         await this.phoneNumber.fill(phoneNumber);
         await this.continueBtn.click();
+    }
+
+    async businessInfo(businessName: string, businessType: string, businessAddress: string, VatId: string, businessEmail: string, comments: string) {
+        await this.businessName.fill(businessName);
+        await this.businessType.selectOption(businessType);
+        await this.businessAddress.fill(businessAddress);
+        await this.VatId.fill(VatId);
+        await this.businessEmail.fill(businessEmail);
+        await this.comments.fill(comments);
+        await this.businessContinueBtn.click();
+    }
+
+    generateCode(): string {
+        const randomNumber = Math.floor(10000000000 + Math.random() * 90000000000);
+        return `IT${randomNumber}`;
     }
 
 

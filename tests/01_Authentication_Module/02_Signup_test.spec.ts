@@ -7,12 +7,14 @@ test.describe('Authentication Flow', () => {
     let authPage: AuthPage;
     let homePage: HomePage;
     let randomEmail: string;
+    let randomNumber: string;
 
     test.beforeEach(async ({ page }) => {
         authPage = new AuthPage(page);
         homePage = new HomePage(page);
 
         randomEmail = authPage.generateEmail();
+        randomNumber = authPage.generateCode();
         await homePage.goToURL();
 
         await homePage.userIcon.click();
@@ -60,6 +62,11 @@ test.describe('Authentication Flow', () => {
         await test.step('Verify Personal Information screen is working as expected', async () => {
             await authPage.personalInfo('Md. Tajwar', 'Ali', '1999-01-01', '341234123', 'Bangladesh', '123 Main St', '1234567890')
             await expect(page.getByText('Business Information')).toBeVisible();
+        });
+
+        await test.step('Verify Business Information page fields are working as expected', async () => {
+            await authPage.businessInfo('SoftwareCompany', 'Trading / Import-Export', 'Business Address', randomNumber, 'Business@gmail.com', process.env.DESCRIPTION_DEMO!)
+            await expect(page.getByText('Choose the Plan That Fits Your Finances')).toBeVisible();
         });
 
     });

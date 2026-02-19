@@ -23,6 +23,15 @@ export class AuthPage {
     readonly onboardingContinueBtn: Locator;
     readonly onboardingFinishBtn: Locator;
 
+    readonly firstName: Locator;
+    readonly lastName: Locator;
+    readonly DOB: Locator;
+    readonly fiscalCode: Locator;
+    readonly country: Locator;
+    readonly address: Locator
+    readonly phoneNumber: Locator;
+    readonly continueBtn: Locator;
+
     constructor(page: Page) {
         this.page = page
 
@@ -46,6 +55,14 @@ export class AuthPage {
         this.onboardingContinueBtn = page.locator("//button[normalize-space()='Continue']")
         this.onboardingFinishBtn = page.locator("//button[normalize-space()='Finish & Submit']")
 
+        this.firstName = page.locator("//input[@placeholder='Enter your first name']")
+        this.lastName = page.locator("//input[@placeholder='Enter your last name']")
+        this.DOB = page.locator("//input[@name='dob']")
+        this.fiscalCode = page.locator("//input[@placeholder='Enter your fiscal code']")
+        this.country = page.locator("//select[@name='country']")
+        this.address = page.locator("//input[@placeholder='Enter your residence address']")
+        this.phoneNumber = page.locator("//input[@placeholder='Enter your phone number']")
+        this.continueBtn = page.locator("//button[normalize-space()='Continue to Business Information']")
     }
 
     // Methods
@@ -61,8 +78,6 @@ export class AuthPage {
         await this.termsCheckbox.click();
         await this.signupButton.click();
     }
-
-
 
     async completeOnboarding(text: string, waitForSelector?: string) {
         for (let step = 1; step <= 10; step++) {
@@ -85,6 +100,23 @@ export class AuthPage {
         }
     }
 
+    async personalInfo(firstName: string, lastName: string, DOB: string, fiscalCode: string, country: string, address: string, phoneNumber: string) {
+        await this.firstName.fill(firstName);
+        await this.lastName.fill(lastName);
+
+        // Convert DD-MM-YYYY → YYYY-MM-DD
+        // const [day, month, year] = DOB.split('-');
+        // const formattedDOB = `${year}-${month}-${day}`;
+
+        // await this.DOB.fill(formattedDOB);
+        await this.DOB.fill('1999-01-01');
+        await this.fiscalCode.fill(fiscalCode);
+        await this.country.click();
+        await this.country.selectOption(country);
+        await this.address.fill(address);
+        await this.phoneNumber.fill(phoneNumber);
+        await this.continueBtn.click();
+    }
 
 
     generateEmail() {

@@ -89,10 +89,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 51,
+                      "workerIndex": 9,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 43000,
+                      "duration": 40528,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -100,18 +100,22 @@
                       "steps": [
                         {
                           "title": "Verify \"Users are able to sign up and move to the OTP page Successfully",
-                          "duration": 10727
+                          "duration": 7990
                         },
                         {
                           "title": "Verify logging in using the registered email and password",
-                          "duration": 5195
+                          "duration": 5219
                         },
                         {
                           "title": "Verify Onboarding screens are working as expected",
-                          "duration": 21575
+                          "duration": 21533
+                        },
+                        {
+                          "title": "Verify Personal Information screen is working as expected",
+                          "duration": 2156
                         }
                       ],
-                      "startTime": "2026-02-18T10:06:29.080Z",
+                      "startTime": "2026-02-19T06:03:05.412Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -137,8 +141,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-18T10:06:27.108Z",
-    "duration": 45995.71100000292,
+    "startTime": "2026-02-19T06:03:03.499Z",
+    "duration": 43478.4990000003,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

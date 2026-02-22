@@ -100,7 +100,7 @@ export class AuthPage {
     }
 
     async completeOnboarding(text: string, waitForSelector?: string) {
-        for (let step = 1; step <= 10; step++) {
+        for (let step = 1; step <= 30; step++) {
             // Handle option selection if present
             const option = this.page.locator("//span[normalize-space()='option1']");
             if (await option.isVisible().catch(() => false)) await option.click();
@@ -141,6 +141,23 @@ export class AuthPage {
         await this.comments.fill(comments);
         await this.businessContinueBtn.click();
     }
+
+
+    // async stripePayment(cardNumber: string, expiryDate: string, cvc: string, country: string) {
+    //     // Fill card details - handle iframe automatically
+    //     const frame = this.page.frameLocator('iframe').first();
+
+    //     await frame.locator('iframe[name="__privateStripeFrame1994"]').fill(cardNumber);
+    //     await frame.locator('iframe[name="__privateStripeFrame1994"]').fill(expiryDate);
+    //     await frame.locator('iframe[name="__privateStripeFrame1994"]').fill(cvc);
+
+    //     // Select country (if it's outside iframe)
+    //     await this.page.locator('select:has-text("Country"), select[name="country"]').selectOption(country);
+
+    //     // Click pay button
+    //     await this.page.locator('text=Pay $29.99 Now').click();
+    // }
+
 
     generateCode(): string {
         const randomNumber = Math.floor(10000000000 + Math.random() * 90000000000);

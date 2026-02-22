@@ -78,7 +78,7 @@
           "specs": [
             {
               "title": "Verify \"Users are able to sign up Successfully and login",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -89,41 +89,74 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
+                      "workerIndex": 14,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 50070,
-                      "errors": [],
+                      "status": "failed",
+                      "duration": 70909,
+                      "error": {
+                        "message": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe').first().contentFrame().locator('iframe[name=\"__privateStripeFrame1994\"]')\u001b[22m\n",
+                        "stack": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe').first().contentFrame().locator('iframe[name=\"__privateStripeFrame1994\"]')\u001b[22m\n\n    at AuthPage.stripePayment (C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\src\\pages\\AuthPage.ts:149:72)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\tests\\01_Authentication_Module\\02_Signup_test.spec.ts:79:28)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\common\\testType.js:245:36)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\common\\testType.js:243:61)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\tests\\01_Authentication_Module\\02_Signup_test.spec.ts:78:20)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\worker\\workerMain.js:323:9)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\worker\\testInfo.js:320:11)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\worker\\workerMain.js:321:7)",
+                        "location": {
+                          "file": "C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\src\\pages\\AuthPage.ts",
+                          "column": 72,
+                          "line": 149
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\src\\pages\\AuthPage.ts:149\n\n\u001b[0m \u001b[90m 147 |\u001b[39m         \u001b[36mconst\u001b[39m frame \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mframeLocator(\u001b[32m'iframe'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n \u001b[90m 148 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 149 |\u001b[39m         \u001b[36mawait\u001b[39m frame\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"__privateStripeFrame1994\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(cardNumber)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 150 |\u001b[39m         \u001b[36mawait\u001b[39m frame\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"__privateStripeFrame1994\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(expiryDate)\u001b[33m;\u001b[39m\n \u001b[90m 151 |\u001b[39m         \u001b[36mawait\u001b[39m frame\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"__privateStripeFrame1994\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(cvc)\u001b[33m;\u001b[39m\n \u001b[90m 152 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\src\\pages\\AuthPage.ts",
+                            "column": 72,
+                            "line": 149
+                          },
+                          "message": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe').first().contentFrame().locator('iframe[name=\"__privateStripeFrame1994\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\src\\pages\\AuthPage.ts:149\n\n\u001b[0m \u001b[90m 147 |\u001b[39m         \u001b[36mconst\u001b[39m frame \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mframeLocator(\u001b[32m'iframe'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n \u001b[90m 148 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 149 |\u001b[39m         \u001b[36mawait\u001b[39m frame\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"__privateStripeFrame1994\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(cardNumber)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 150 |\u001b[39m         \u001b[36mawait\u001b[39m frame\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"__privateStripeFrame1994\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(expiryDate)\u001b[33m;\u001b[39m\n \u001b[90m 151 |\u001b[39m         \u001b[36mawait\u001b[39m frame\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"__privateStripeFrame1994\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(cvc)\u001b[33m;\u001b[39m\n \u001b[90m 152 |\u001b[39m\u001b[0m\n\u001b[2m    at AuthPage.stripePayment (C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\src\\pages\\AuthPage.ts:149:72)\u001b[22m\n\u001b[2m    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\tests\\01_Authentication_Module\\02_Signup_test.spec.ts:79:28)\u001b[22m\n\u001b[2m    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\common\\testType.js:245:36)\u001b[22m\n\u001b[2m    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\common\\testType.js:243:61)\u001b[22m\n\u001b[2m    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\tests\\01_Authentication_Module\\02_Signup_test.spec.ts:78:20)\u001b[22m\n\u001b[2m    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\worker\\workerMain.js:323:9)\u001b[22m\n\u001b[2m    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\worker\\testInfo.js:320:11)\u001b[22m\n\u001b[2m    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\worker\\workerMain.js:321:7)\u001b[22m"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
                           "title": "Verify \"Users are able to sign up and move to the OTP page Successfully",
-                          "duration": 7932
+                          "duration": 9707
                         },
                         {
                           "title": "Verify logging in using the registered email and password",
-                          "duration": 5197
+                          "duration": 5175
                         },
                         {
                           "title": "Verify Onboarding screens are working as expected",
-                          "duration": 21438
+                          "duration": 32389
                         },
                         {
                           "title": "Verify Personal Information screen is working as expected",
-                          "duration": 2238
+                          "duration": 2178
                         },
                         {
                           "title": "Verify Business Information page fields are working as expected",
-                          "duration": 3732
+                          "duration": 3607
                         },
                         {
                           "title": "Verify Subscription page fields are working as expected",
-                          "duration": 4821
+                          "duration": 4584
+                        },
+                        {
+                          "title": "Verify Stripe payment fields are working as expected",
+                          "duration": 9072,
+                          "error": {
+                            "message": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe').first().contentFrame().locator('iframe[name=\"__privateStripeFrame1994\"]')\u001b[22m\n",
+                            "stack": "Error: locator.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('iframe').first().contentFrame().locator('iframe[name=\"__privateStripeFrame1994\"]')\u001b[22m\n\n    at AuthPage.stripePayment (C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\src\\pages\\AuthPage.ts:149:72)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\tests\\01_Authentication_Module\\02_Signup_test.spec.ts:79:28)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\common\\testType.js:245:36)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\common\\testType.js:243:61)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\tests\\01_Authentication_Module\\02_Signup_test.spec.ts:78:20)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\worker\\workerMain.js:323:9)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\worker\\testInfo.js:320:11)\n    at C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\node_modules\\playwright\\lib\\worker\\workerMain.js:321:7)",
+                            "location": {
+                              "file": "C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\src\\pages\\AuthPage.ts",
+                              "column": 72,
+                              "line": 149
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39m..\\src\\pages\\AuthPage.ts:149\n\n\u001b[0m \u001b[90m 147 |\u001b[39m         \u001b[36mconst\u001b[39m frame \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mframeLocator(\u001b[32m'iframe'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n \u001b[90m 148 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 149 |\u001b[39m         \u001b[36mawait\u001b[39m frame\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"__privateStripeFrame1994\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(cardNumber)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 150 |\u001b[39m         \u001b[36mawait\u001b[39m frame\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"__privateStripeFrame1994\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(expiryDate)\u001b[33m;\u001b[39m\n \u001b[90m 151 |\u001b[39m         \u001b[36mawait\u001b[39m frame\u001b[33m.\u001b[39mlocator(\u001b[32m'iframe[name=\"__privateStripeFrame1994\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(cvc)\u001b[33m;\u001b[39m\n \u001b[90m 152 |\u001b[39m\u001b[0m"
+                          }
                         }
                       ],
-                      "startTime": "2026-02-19T08:34:57.382Z",
+                      "startTime": "2026-02-22T06:08:30.460Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -131,10 +164,15 @@
                           "contentType": "application/zip",
                           "path": "C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\test-results\\01_Authentication_Module-0-3efc5-n-up-Successfully-and-login-chromium\\trace.zip"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\src\\pages\\AuthPage.ts",
+                        "column": 72,
+                        "line": 149
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
               "id": "82f75f1ed935a2780a22-2e1d1730c1fb777b2781",
@@ -149,11 +187,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-19T08:34:55.480Z",
-    "duration": 53268.887999998406,
-    "expected": 1,
+    "startTime": "2026-02-22T06:08:28.438Z",
+    "duration": 74288.95500000007,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

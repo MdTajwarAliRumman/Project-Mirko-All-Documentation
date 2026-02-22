@@ -75,6 +75,12 @@ test.describe('Authentication Flow', () => {
             await expect(page.getByText('Secure Checkout')).toBeVisible();
         });
 
+        await test.step('Verify Stripe payment fields are working as expected', async () => {
+            await authPage.stripePayment('4242424242424242', '12/25', '123', 'Bangladesh');
+            await expect(page.getByText('Upload Document')).toBeVisible();
+
+        });
+
 
     });
 

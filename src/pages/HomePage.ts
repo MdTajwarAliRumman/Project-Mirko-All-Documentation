@@ -5,12 +5,15 @@ export class HomePage {
 
     readonly page: Page;
     readonly userIcon: Locator;
+    readonly learnMorebtn: Locator;
 
     constructor(page: Page) {
         this.page = page
 
         // Elements
         this.userIcon = page.locator("svg[xmlns='http://www.w3.org/2000/svg'][width='14']")
+        this.learnMorebtn = page.locator("//span[normalize-space()='Learn More']");
+
     }
 
     // Methods

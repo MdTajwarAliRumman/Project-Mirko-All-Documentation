@@ -1,10 +1,10 @@
 {
   "config": {
-    "configFile": "C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\playwright.config.ts",
-    "rootDir": "C:/Users/Tajwar (Day Shift)/Desktop/All Important docs/Automation tests/Automation_Testing_Project_Mirko/tests",
+    "configFile": "C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko - Copy\\playwright.config.ts",
+    "rootDir": "C:/Users/Tajwar (Day Shift)/Desktop/All Important docs/Automation tests/Automation_Testing_Project_Mirko - Copy/tests",
     "forbidOnly": false,
     "fullyParallel": true,
-    "globalSetup": null,
+    "globalSetup": "C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko - Copy\\global-setup.ts",
     "globalTeardown": null,
     "globalTimeout": 0,
     "grep": {},
@@ -16,7 +16,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "C:/Users/Tajwar (Day Shift)/Desktop/All Important docs/Automation tests/Automation_Testing_Project_Mirko/test-results",
+        "outputDir": "C:/Users/Tajwar (Day Shift)/Desktop/All Important docs/Automation tests/Automation_Testing_Project_Mirko - Copy/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -24,12 +24,12 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/Tajwar (Day Shift)/Desktop/All Important docs/Automation tests/Automation_Testing_Project_Mirko/tests",
+        "testDir": "C:/Users/Tajwar (Day Shift)/Desktop/All Important docs/Automation tests/Automation_Testing_Project_Mirko - Copy/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 100000
+        "timeout": 60000
       }
     ],
     "quiet": false,
@@ -64,46 +64,68 @@
   },
   "suites": [
     {
-      "title": "02_Dashboard\\01_Document_Module.spec.ts",
-      "file": "02_Dashboard/01_Document_Module.spec.ts",
+      "title": "02_Dashboard\\01_Invoice_Module.spec.ts",
+      "file": "02_Dashboard/01_Invoice_Module.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
           "title": "Authentication Flow",
-          "file": "02_Dashboard/01_Document_Module.spec.ts",
-          "line": 6,
-          "column": 6,
+          "file": "02_Dashboard/01_Invoice_Module.spec.ts",
+          "line": 7,
+          "column": 15,
           "specs": [
             {
-              "title": "Verify \"User login\" is Successful",
+              "title": "Verify Creating new Invoice",
               "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 100000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 18,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6934,
+                      "duration": 27514,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-04-09T08:38:58.919Z",
+                      "steps": [
+                        {
+                          "title": "TC-1 Login into the Dashboard using valid credentials",
+                          "duration": 10076
+                        },
+                        {
+                          "title": "TC-2 Verfiy moving to Invoice module and Viewing Proforma Invoices list",
+                          "duration": 6140
+                        },
+                        {
+                          "title": "TC-3 Validate Creating Proforma Invoice",
+                          "duration": 3530
+                        },
+                        {
+                          "title": "TC-4 Validate Entering inputs into the date fields",
+                          "duration": 3094
+                        },
+                        {
+                          "title": "TC-5 Validate Entering Inputs into the Basic Information Fields",
+                          "duration": 3076
+                        }
+                      ],
+                      "startTime": "2026-11-01T09:52:22.420Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko\\test-results\\02_Dashboard-01_Document_M-c01ac-fy-User-login-is-Successful-chromium\\trace.zip"
+                          "path": "C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko - Copy\\test-results\\02_Dashboard-01_Invoice_Mo-7d179-Verify-Creating-new-Invoice-chromium\\trace.zip"
                         }
                       ]
                     }
@@ -111,9 +133,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "1be60263fc1b77d1434d-bbba7128a9ba82c4733c",
-              "file": "02_Dashboard/01_Document_Module.spec.ts",
-              "line": 24,
+              "id": "106d7cbb8a0f13061ee9-17dd4eacbc7f9cf6d298",
+              "file": "02_Dashboard/01_Invoice_Module.spec.ts",
+              "line": 23,
               "column": 9
             }
           ]
@@ -123,8 +145,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-09T08:38:57.062Z",
-    "duration": 9350.96,
+    "startTime": "2026-11-01T09:52:20.105Z",
+    "duration": 30440.841999999713,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

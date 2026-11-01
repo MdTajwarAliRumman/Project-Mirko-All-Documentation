@@ -4,6 +4,7 @@ export class AuthPage {
     // initialize all the pages
 
     readonly page: Page;
+    private otp: string = '';   // ADD THIS LINE
     readonly userIcon: Locator;
     readonly emailInput: Locator;
     readonly passwordInput: Locator;
@@ -41,6 +42,12 @@ export class AuthPage {
     readonly businessContinueBtn: Locator;
 
     readonly subscripitionBtn: Locator;
+
+    readonly otpInput1: Locator;
+    readonly otpInput2: Locator;
+    readonly otpInput3: Locator;
+    readonly otpInput4: Locator;
+    readonly verifyOTPBtn: Locator;
 
     constructor(page: Page) {
         this.page = page
@@ -83,6 +90,12 @@ export class AuthPage {
         this.businessContinueBtn = page.locator("//button[normalize-space()='Continue to Document Upload']")
 
         this.subscripitionBtn = page.locator("//button[normalize-space()='Choose the Plan That Fits Your Finances']")
+
+        this.otpInput1 = page.locator("//body//div//input[1]")
+        this.otpInput2 = page.locator("//body//div//input[2]")
+        this.otpInput3 = page.locator("//body//div//input[3]")
+        this.otpInput4 = page.locator("//body//div//input[4]")
+        this.verifyOtpBtn = page.locator("//button[normalize-space()='Verify OTP']")
     }
 
     // Methods
@@ -91,12 +104,27 @@ export class AuthPage {
         await this.userIcon.click();
     }
 
+
     async userSignUp(email: string, password: string, confirmPassword: string) {
         await this.signUpEmailInput.fill(email);
         await this.signUpPasswordInput.fill(password);
         await this.signUpConfirmPasswordInput.fill(confirmPassword);
         await this.termsCheckbox.click();
+
+        const registerResponsePromise = this.page.waitForResponse(
+            (response) => response.url().includes('/api/register') && response.status() === 201
+        );
+
         await this.signupButton.click();
+
+        const registerResponse = await registerResponsePromise;
+        console.log('✅ Response caught:', registerResponse.url(), registerResponse.status());
+
+        const body = await registerResponse.json();
+        console.log('✅ Body:', JSON.stringify(body, null, 2));
+
+        this.otp = body.data.otp;
+        console.log('✅ OTP set to:', this.otp);
     }
 
     async completeOnboarding(text: string, waitForSelector?: string) {
@@ -143,22 +171,6 @@ export class AuthPage {
     }
 
 
-    // async stripePayment(cardNumber: string, expiryDate: string, cvc: string, country: string) {
-    //     // Fill card details - handle iframe automatically
-    //     const frame = this.page.frameLocator('iframe').first();
-
-    //     await frame.locator('iframe[name="__privateStripeFrame1994"]').fill(cardNumber);
-    //     await frame.locator('iframe[name="__privateStripeFrame1994"]').fill(expiryDate);
-    //     await frame.locator('iframe[name="__privateStripeFrame1994"]').fill(cvc);
-
-    //     // Select country (if it's outside iframe)
-    //     await this.page.locator('select:has-text("Country"), select[name="country"]').selectOption(country);
-
-    //     // Click pay button
-    //     await this.page.locator('text=Pay $29.99 Now').click();
-    // }
-
-
     generateCode(): string {
         const randomNumber = Math.floor(10000000000 + Math.random() * 90000000000);
         return `IT${randomNumber}`;
@@ -168,4 +180,15 @@ export class AuthPage {
     generateEmail() {
         return `user_${Date.now()}@testmail.com`;
     }
+
+
+    // async fillOTP() {
+    //     await this.otpInput1.fill(digits[0]);
+    //     await this.otpInput2.fill(digits[1]);
+    //     await this.otpInput3.fill(digits[2]);
+    //     await this.otpInput4.fill(digits[3]);   
+    //     await this.verifyOtpBtn.click();
+    // }
+
+
 }

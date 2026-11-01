@@ -15,6 +15,8 @@ dotenv.config();
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  /* Run global-setup.ts once before the entire suite to save the auth session */
+  globalSetup: require.resolve('./global-setup'),
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -25,7 +27,7 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : 10,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  timeout: 100000,
+  timeout: 60 * 1000,
   reporter: [['html'],
   ['list'],
   ['json', { outputFile: 'json-test-report.json' }],
@@ -43,7 +45,12 @@ export default defineConfig({
     trace: 'on',
     headless: false,
     // action timeout
-    actionTimeout: 30000,
+    actionTimeout: 30 * 1000, // 30 seconds
+
+    /* ── Reuse the session saved by global-setup.ts ─────────────────────────
+     * Playwright injects cookies + localStorage into every new browser context
+     * automatically, so tests start already logged in.                        */
+    storageState: '.auth/session.json',
   },
 
   /* Configure projects for major browsers */

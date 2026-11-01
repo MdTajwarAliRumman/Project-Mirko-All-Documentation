@@ -43,7 +43,17 @@ This project is designed to provide comprehensive accounting and tax consultancy
 *(Continuously Updating the reports)*
 
 <p align="left">
-  <a href="https://www.notion.so/2eb16aeb73b880dfb5b7ec5b6a269a0d?v=2eb16aeb73b8812db010000cb797575c&source=copy_link" target="_blank">
+  <a href="https://app.notion.com/p/358eb7a605b68074a4eed9bc8882a145?v=358eb7a605b681b5ab0c000c5db1af3c" target="_blank">
+    <img src="https://img.shields.io/badge/Bug_Report:%20Admin_Dashboard-Click%20Here!-green?style=for-the-badge" alt="Bug Report" />
+  </a>
+</p>
+<p align="left">
+  <a href="https://app.notion.com/p/358eb7a605b6813a92f7ff4e8fe7b04f?v=358eb7a605b681d2a080000ceb3926e4" target="_blank">
+    <img src="https://img.shields.io/badge/Bug_Report:%20Website-Click%20Here!-orange?style=for-the-badge" alt="Bug Report" />
+  </a>
+</p>
+<p align="left">
+  <a href="https://app.notion.com/p/364a947ae8fb804ebeabe4c6a97271ce?v=364a947ae8fb8058a734000cab3b55fb" target="_blank">
     <img src="https://img.shields.io/badge/Bug_Report:%20Mobile_App-Click%20Here!-red?style=for-the-badge" alt="Bug Report" />
   </a>
 </p>

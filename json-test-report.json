@@ -36,11 +36,15 @@
     "reporter": [
       [
         "html",
-        null
+        {
+          "open": "never"
+        }
       ],
       [
         "list",
-        null
+        {
+          "printSteps": true
+        }
       ],
       [
         "json",
@@ -89,10 +93,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 18,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 27514,
+                      "duration": 25232,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -100,34 +104,40 @@
                       "steps": [
                         {
                           "title": "TC-1 Login into the Dashboard using valid credentials",
-                          "duration": 10076
+                          "duration": 39
                         },
                         {
                           "title": "TC-2 Verfiy moving to Invoice module and Viewing Proforma Invoices list",
-                          "duration": 6140
+                          "duration": 7010
                         },
                         {
                           "title": "TC-3 Validate Creating Proforma Invoice",
-                          "duration": 3530
+                          "duration": 3511
                         },
                         {
                           "title": "TC-4 Validate Entering inputs into the date fields",
-                          "duration": 3094
+                          "duration": 3086
                         },
                         {
                           "title": "TC-5 Validate Entering Inputs into the Basic Information Fields",
-                          "duration": 3076
+                          "duration": 141
+                        },
+                        {
+                          "title": "TC-6 Validate Entering Inputs into the Issuer Details  Fields",
+                          "duration": 3393
+                        },
+                        {
+                          "title": "TC-7 Verify Recipient Details Fields are properly working or not",
+                          "duration": 3141
+                        },
+                        {
+                          "title": "TC-8 Verify Item Table fields are working properly or not",
+                          "duration": 3251
                         }
                       ],
-                      "startTime": "2026-11-01T09:52:22.420Z",
+                      "startTime": "2026-11-03T06:33:26.261Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\Tajwar (Day Shift)\\Desktop\\All Important docs\\Automation tests\\Automation_Testing_Project_Mirko - Copy\\test-results\\02_Dashboard-01_Invoice_Mo-7d179-Verify-Creating-new-Invoice-chromium\\trace.zip"
-                        }
-                      ]
+                      "attachments": []
                     }
                   ],
                   "status": "expected"
@@ -145,8 +155,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-01T09:52:20.105Z",
-    "duration": 30440.841999999713,
+    "startTime": "2026-11-03T06:33:23.927Z",
+    "duration": 28039.82899999991,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

@@ -18,6 +18,14 @@ export class InvoicePage {
     readonly discount: Locator;
     readonly tableDiscountAmount: Locator;
     readonly taxRate: Locator;
+    readonly paymentMethod: Locator;
+    readonly paymentTerms: Locator;
+    readonly bankName: Locator;
+    readonly IBAN: Locator;
+    readonly depositRequired: Locator;
+    readonly additionalNote: Locator;
+    readonly action3Dots: Locator;
+
 
     constructor(page: Page) {
         this.page = page;
@@ -36,6 +44,13 @@ export class InvoicePage {
         this.tableUnit = page.locator("//input[@name='items.0.unit_price']");
         this.tableDiscountAmount = page.locator("//input[@name='items.0.discount_percent']");
         this.taxRate = page.locator("//input[@name='items.0.tax_percent']");
+        this.paymentMethod = page.locator("//select[@name='payment_method']");
+        this.paymentTerms = page.locator("//input[@placeholder='e.g., Net 15, Net 30']");
+        this.bankName = page.locator("//input[@placeholder='e.g., Intesa Sanpaolo']");
+        this.IBAN = page.locator("//input[@placeholder='IT60 X054 2811 1010 0000 0123 456']");
+        this.depositRequired = page.locator("//input[@placeholder='e.g., 50% deposit required']");
+        this.additionalNote = page.locator("//textarea[@placeholder='Any additional terms, conditions, or notes...']");
+        this.action3Dots = page.locator('table tbody tr').first().locator('button').last();
 
     }
 

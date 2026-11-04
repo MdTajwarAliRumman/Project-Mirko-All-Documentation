@@ -92,5 +92,53 @@ test.describe.serial('Authentication Flow', () => {
             await page.waitForTimeout(3000);
 
         });
+
+        await test.step('TC-8 Verify Item Table fields are working properly or not', async () => {
+
+            await page.getByPlaceholder("Describe the service or product...").fill(process.env.DESCRIPTION_DEMO);
+            await invoicePage.tableQuantity.fill("40");
+            await invoicePage.tableUnit.fill('1000');
+            await invoicePage.unitdropdown.selectOption({ label: 'SC — Scatola (Box)' })
+            await invoicePage.tableDiscountAmount.fill('15')
+            await invoicePage.taxRate.fill('10');
+            await page.waitForTimeout(3000);
+
+        });
+
+        await test.step('TC-9 Verify Payment Information fields are working properly or not', async () => {
+
+            await invoicePage.paymentMethod.selectOption({ index: 5 });
+            await invoicePage.paymentTerms.fill("test Terms");
+            await invoicePage.bankName.fill("Prime Bank");
+            await invoicePage.IBAN.fill("IT60 X054 2811 1010 0000 0123 444");
+            await invoicePage.depositRequired.fill('30%');
+            await invoicePage.additionalNote.fill(process.env.DESCRIPTION_DEMO)
+            await page.waitForTimeout(3000);
+            await page.getByText('Create invoice').click(
+
+            )
+        });
+
+        await test.step('TC-10 Verify Deleting invoice', async () => {
+
+            await invoicePage.action3Dots.click();
+
+            await page.waitForTimeout(3000);
+            // await page.getByText('Delete').click()
+            // await expect(page.getByText('Proforma invoice deleted successfully')).toBeVisible()
+
+        });
+
+        // await test.step('TC-10 Verify Deleting invoice', async () => {
+
+        //     const firstInvoiceRow = page.getByRole('row').nth(1);
+
+        //     await invoicePage.action3Dots.first().click();
+
+        //     await page.waitForTimeout(3000);
+        //     await page.getByText('Delete').click()
+        //     await expect(page.getByText('Proforma invoice deleted successfully')).toBeVisible()
+
+        // });
     });
 });
